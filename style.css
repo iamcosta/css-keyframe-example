@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 10, 51);
+}
+
+.element {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet; 
+    
+    animation-name: zigzag;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zigzag {
+    25% {
+        transform: translateX(200px) rotateZ(180deg);
+    }
+    50% {
+        transform: translateX(0) rotateZ(0) scale(2);
+        background-color: aqua;
+        border-radius: 15px;
+    }
+    75% {
+        transform: translateX(-200px) rotateZ(-180deg);
+    }
+}
+
